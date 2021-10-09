@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     title: "Demo App", //shows when your app is minimize
     home: HomePage(),
   ));
@@ -15,35 +15,36 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Demo App"),
+          title: const Text("Demo App"),
         ),
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.teal,
-              // shape: BoxShape.circle,
-              borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(colors: [Colors.yellow, Colors.red]),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 5,
-                    offset: Offset(2.0, 10.0))
+        body: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+
+            // These are width and height of a container and it takes the whole screen
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+              //crossAxisAlignment for Row is Column and it is center of the page
+
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                )
               ],
-            ),
-            width: 100,
-            height: 100,
-            child: Text(
-              "+",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ));
+            )));
   }
 }
