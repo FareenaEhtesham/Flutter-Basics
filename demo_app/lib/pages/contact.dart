@@ -39,7 +39,7 @@ class Contact extends StatelessWidget {
               padding: EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: () async {
-                  final phoneNumber = '0341-3892425';
+                  final phoneNumber = '0341-XXXXXXX';
                   final url = 'tel:$phoneNumber';
 
                   if (await canLaunch(url)) {
@@ -56,7 +56,7 @@ class Contact extends StatelessWidget {
               padding: EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: () async {
-                  final phoneNumber = '0341-3892425';
+                  final phoneNumber = '0341-XXXXXXX';
                   final url = 'sms:$phoneNumber';
 
                   if (await canLaunch(url)) {
@@ -73,7 +73,7 @@ class Contact extends StatelessWidget {
                   padding: EdgeInsets.all(16.0),
                   child: ElevatedButton(
                     onPressed: () async {
-                      final toEmail = 'fareena.ehtesham.230@gmail.com';
+                      final toEmail = 'abc@gmail.com';
                       final subject = 'Queries';
                       final message = 'Hello Fareena\n Check this post';
                       final url =
