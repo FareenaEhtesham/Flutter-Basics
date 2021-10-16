@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/pages/contact.dart';
-import 'package:demo_app/Drawer.dart';
+import 'package:demo_app/widgets/Drawer.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
@@ -98,14 +98,16 @@ class Register extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                child: const Text('Submit'),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Contact()),
-                  );
-                },
-              ),
+                  child: const Text('Submit'),
+                  // onPressed: () {
+                  //   Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => Contact()),
+                  //   );
+                  // },
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/contact');
+                  }),
             ],
           )),
         ),

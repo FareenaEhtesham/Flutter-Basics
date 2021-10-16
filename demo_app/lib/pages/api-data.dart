@@ -36,12 +36,34 @@ class _ApiDataState extends State<ApiData> {
       ),
       body: Padding(
           padding: const EdgeInsets.all(16),
+          // child: GridView.builder(
+          //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(2), // to specify how many elements in 1 row
+          //     itemBuilder: (context, index) {
+          //       return ListTile(
+          //         title: Text(data[index]["title"]),
+          //         leading: Image.network(
+          //           data[index]["url"],
+          //           fit: BoxFit.fill,
+          //           width: 100,
+          //           height: 500,
+          //           alignment: Alignment.center,
+          //         ),
+          //       );
+          //     },
+          //     itemCount: data.length,
+          //   ),
           child: Card(
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(data[index]["title"]),
-                  leading: Image.network(data[index]["url"]),
+                  leading: Image.network(
+                    data[index]["url"],
+                    fit: BoxFit.fill,
+                    width: 100,
+                    height: 500,
+                    alignment: Alignment.center,
+                  ),
                 );
               },
               itemCount: data.length,
