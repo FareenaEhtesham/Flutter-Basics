@@ -10,7 +10,7 @@ void main() {
   runApp(MaterialApp(
     title: "Demo App", //shows when your app is minimize
     home: Register(),
-    theme: ThemeData(primarySwatch: Colors.blue),
+    theme: ThemeData(primarySwatch: Colors.blue, dividerColor: Colors.black),
     debugShowCheckedModeBanner: false, //for remove debug of flutter
     routes: {
       '/contact': (context) => const Contact(),
