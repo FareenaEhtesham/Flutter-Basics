@@ -1,0 +1,3 @@
+onMessage fires when the app is open and running in the foreground.
+onResume fires if the app is closed, but still running in the background.
+onLaunch fires if the app is fully terminated.
